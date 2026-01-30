@@ -1,0 +1,116 @@
+/* custom.css */
+.avatar { font-weight: 700; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.fade-in { animation: fadeIn .12s ease; }
+
+/* chat bubble tweak */
+.card .bg-primary { box-shadow: 0 4px 18px rgba(99,102,241,0.08); }
+.card .bg-light { box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+
+/* sticky table header fix */
+.table thead.sticky-top { top: 0; }
+
+/* smaller avatar spacing */
+.avatar { width: 36px; height: 36px; line-height: 36px; text-align: center; }
+
+/* app layout */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.app-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+main.container {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+/* dashboard grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.left-panel, .right-panel {
+  height: calc(100vh - 200px);
+  overflow: hidden;
+}
+
+.chat-area {
+  overflow-y: auto;
+  max-height: calc(100% - 100px);
+  padding: 1rem;
+}
+
+/* dashboard specific styles */
+.dashboard-container {
+  animation: fadeIn 0.3s ease;
+}
+
+.dashboard-container .card {
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-container .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* responsive tweak for small screens */
+@media (max-width: 991px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .left-panel, .right-panel {
+    height: auto;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container { padding-left: 8px; padding-right: 8px; }
+  .app-header h3 { font-size: 1.2rem; }
+}
+
+/* loading spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* smooth transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* button group styles */
+.btn-group .btn {
+  transition: all 0.2s ease;
+}
+
+.btn-group .btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Message formatting */
+.message-content {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
