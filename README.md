@@ -135,22 +135,6 @@ PRELOADED_EXCEL=./api/sample_data.xlsx
 
 ---
 
-## 🚀 Deployment (Backend)
-
-Recommended: **Render**
-
-1. Push to GitHub
-2. Create Render Web Service
-3. Build Command:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Start Command:
-   ```bash
-   gunicorn realestate_project.wsgi
-   ```
-
----
 
 ## ✅ Ready to Use
 
@@ -168,3 +152,4 @@ MIT License — feel free to use and modify.
 ---
 
 ### Made with ❤️ by JAY
+
